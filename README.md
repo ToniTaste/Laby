@@ -1,22 +1,18 @@
-# ✏️ Stift-Blockly
+# ✏️ Blockly-Labyrinth
 
-Ein webbasiertes Zeichenprojekt mit Blockly – inspiriert von Turtle Graphics. Nutzer:innen können über Blöcke eine virtuelle „Stift“-Figur steuern, Farben und Breiten ändern und SVG-Grafiken exportieren.
+Führe einen Roboter mithilfe der blockbasierten Programmierung durch das Labyrinth. Nutzer:innen können über Blöcke einen Roboter steuern und zur Schatzkiste führen.
 
 ## 🔍 Funktionen
 
-- Blockly-Editor mit benutzerdefinierten Blöcken zum Zeichnen
-- Schrittweiser oder vollständiger Programmlauf
-- SVG-Hintergrund laden und löschen
-- Export der Zeichnung als SVG-Datei
-- Farbwahl und Stiftbreiten-Dropdown
-- Freie Winkeleingabe mit Vorschauhilfe
+- Blockly-Editor mit Blöcken zum Bewegen und einem Schleifenblock zum Steuern des Roboters
+- Schrittweiser oder vollständiger Programmlauf mit Hervorhebung des aktuellen Blocks
+- Einstellen der Ablaufgeschwindigkeit
+- Labyrinth austauschbar - Entwickle eigene Labyrinthe mit dem Laby-Editor
 - Speichern/Laden des Programmcodes als XML
 
 ## 🖼️ Screenshot
 
-![Screenshot der Benutzeroberfläche](screenshot.png)
-
-*(Bitte durch echten Screenshot ersetzen)*
+![Screenshot der Benutzeroberfläche](img/Laby.png)
 
 ## 🚀 Online ausprobieren
 
