@@ -7,7 +7,7 @@ Führe einen Roboter mithilfe der blockbasierten Programmierung durch das Labyri
 - Blockly-Editor mit Blöcken zum Bewegen und einem Schleifenblock zum Steuern des Roboters
 - Schrittweiser oder vollständiger Programmlauf mit Hervorhebung des aktuellen Blocks
 - Einstellen der Ablaufgeschwindigkeit
-- Labyrinth austauschbar - Entwickle eigene Labyrinthe mit dem Laby-Editor
+- Labyrinth austauschbar - Entwickle eigene Labyrinthe mit dem [Laby-Editor](https://github.com/ToniTaste/Laby-Editor)
 - Speichern/Laden des Programmcodes als XML
 
 ## 🖼️ Screenshot
