@@ -1,0 +1,21 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="maze_start" id="Sq0NAb(!0ZOALb^OQyt=" deletable="false" x="20" y="20">
+    <statement name="NEXT">
+      <block type="controls_repeat_ext" id="8,L?XBewE*U)+`R!~od_">
+        <value name="TIMES">
+          <shadow type="math_number" id=":9hPeU}wX#4$tc}9[$!/">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <statement name="DO">
+          <block type="maze_turn" id="%oVb*#pEAOT2@i}asY%D">
+            <field name="DIR">LEFT</field>
+          </block>
+        </statement>
+        <next>
+          <block type="maze_move" id="*=pt(_g7cR3[x;v[_irV"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

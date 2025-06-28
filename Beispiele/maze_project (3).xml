@@ -1,0 +1,73 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="maze_start" id="nfCm|8j4moOup2sJTKVm" x="20" y="20">
+    <statement name="NEXT">
+      <block type="maze_move" id="5u*z!CBd+V8h]GVE]T{y">
+        <next>
+          <block type="maze_move" id="DYe:7c7yV(juZ_?_7WU4">
+            <next>
+              <block type="maze_move" id="xx!.#c8:GY*8W{Hj|jvr">
+                <next>
+                  <block type="maze_move" id="rsfC3g%Fd!AZO9HZ.lLc">
+                    <next>
+                      <block type="maze_move" id="CkvVv+]+1(dBAloQ{kzo">
+                        <next>
+                          <block type="maze_move" id="n*SsE!GmE@yQyjQ2Gx~-">
+                            <next>
+                              <block type="maze_move" id="0^!;i/!ZtdBniu4)uY?^">
+                                <next>
+                                  <block type="maze_turn" id="z;rsL)B`{fe(55*g#vkJ">
+                                    <field name="DIR">RIGHT</field>
+                                    <next>
+                                      <block type="maze_move" id="]MAfGL0_%|V{9zVKo(J4">
+                                        <next>
+                                          <block type="maze_move" id="GZ0#iQa@1N-I_9kCJW0S">
+                                            <next>
+                                              <block type="maze_move" id="(t?4TM|I#l5owSES$-C@">
+                                                <next>
+                                                  <block type="maze_move" id="m8l++:ZXyR,j4jJZ$7m{">
+                                                    <next>
+                                                      <block type="maze_move" id=",L[YZKnb~,uHO]ND=E-E">
+                                                        <next>
+                                                          <block type="maze_move" id="q=TeG72KViU;QBjDUIxy">
+                                                            <next>
+                                                              <block type="maze_turn" id="HV8t!4i3/|Wi6a;9=nDq">
+                                                                <field name="DIR">RIGHT</field>
+                                                                <next>
+                                                                  <block type="maze_move" id="xn9-kz`J]F*CGukkmO3_">
+                                                                    <next>
+                                                                      <block type="maze_move" id="i~aij/(,?]OzgF)OIVaf"></block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

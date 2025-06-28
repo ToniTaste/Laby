@@ -1,0 +1,15 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="maze_start" id="o_3JP]=[d$WB2|j-Q)rT" x="54" y="42">
+    <statement name="DO">
+      <block type="maze_move" id="E19l5A!-yHc||qTI_N1[">
+        <next>
+          <block type="maze_move" id="2(`7ugmdf{zuUEH@z=-d">
+            <next>
+              <block type="maze_move" id="S#M{ygY9*4)1o@FZU,6l"></block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

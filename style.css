@@ -1,0 +1,71 @@
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  margin: 10px;
+}
+
+#mainLayout {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 7rem); /* Platz für Überschrift oben */
+}
+
+#blocklyDiv {
+  flex: 0 1 500px;   /* flexibel, aber bevorzugt 700px */
+
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 1rem;
+}
+
+canvas#mazeCanvas {
+  flex: 0 0 500px;
+  width: 500px;
+  height: 100%;       /* nimmt volle Höhe des Containers */
+  display: block;
+}
+
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+#controls label {
+  display: inline-flex;
+  align-items: center;
+  /* vertikal mittig ausrichten */
+  margin-bottom: 0.5rem;
+  /* dein bestehender Abstand */
+}
+
+#controls button {
+  width: 100%;
+  /* Buttons füllen den Container */
+  margin: 0 0 0.5rem 0;
+  /* unten Abstand zwischen Buttons */
+  padding: 0.5rem;
+  /* etwas mehr Klickfläche */
+}
+
+canvas {
+  border: 1px solid #ccc;
+}
+
+
+#timeoutSlider {
+  width: 100px;
+  margin: 0 0.5rem;
+}
+
+
+.speed-icon {
+  font-size: 1.5rem;
+}
+
+.blocklyMenuItem {
+  min-width: 1.5em;
+}

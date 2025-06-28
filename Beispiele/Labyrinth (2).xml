@@ -1,0 +1,25 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="maze_start" id="Tvn.#GoOsG3_eHEKNpgk" deletable="false" x="20" y="20">
+    <statement name="NEXT">
+      <block type="maze_turn" id="OdygZ~.6;xQ{~zFZe]BW">
+        <field name="DIR">LEFT</field>
+        <next>
+          <block type="custom_repeat" id="13tE%JO2H9K+oPp}qVH$">
+            <field name="TIMES">5</field>
+            <statement name="DO">
+              <block type="maze_move" id="#pq|PIt_$0DxkNDk50EU"></block>
+            </statement>
+            <next>
+              <block type="maze_turn" id="^lpSXyu0a7:*@kIM%k~P">
+                <field name="DIR">RIGHT</field>
+                <next>
+                  <block type="maze_move" id=".i^zoU^s1Sv;duQiFNzL"></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

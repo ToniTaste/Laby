@@ -1,0 +1,63 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="maze_start" id="!KB;G,Q2Dm?JutP|4CfX" deletable="false" x="20" y="20">
+    <statement name="NEXT">
+      <block type="maze_turn" id="E7=w%pQrA~IX4Y_m(w6l">
+        <field name="DIR">LEFT</field>
+        <next>
+          <block type="maze_move" id="^y[C|$VRwfAAEKP!B0i{">
+            <next>
+              <block type="maze_move" id="YNZ!WKE//cwd#66X[)L_">
+                <next>
+                  <block type="maze_move" id="$=)7ZKj_Tjnj~d4._7x_">
+                    <next>
+                      <block type="maze_move" id="?)4Q8iDdMVOez^^:,ho]">
+                        <next>
+                          <block type="maze_move" id="k??tS^}ZJ=/#-Pq.zLo;">
+                            <next>
+                              <block type="maze_move" id="GqV2pBsu*yLAGqj{7wHf">
+                                <next>
+                                  <block type="maze_move" id="4oht7SFS4Tz51Km#glS8">
+                                    <next>
+                                      <block type="maze_turn" id="7o6Spf~[:(Mf:GO_214p">
+                                        <field name="DIR">RIGHT</field>
+                                        <next>
+                                          <block type="maze_move" id="p{B.:2/KQn(w2agjZ24d">
+                                            <next>
+                                              <block type="maze_move" id="aL`^kH#qsh@t{QY~TEQ|">
+                                                <next>
+                                                  <block type="maze_turn" id="Nq#_O[n9+@V`p?9K+Up0">
+                                                    <field name="DIR">RIGHT</field>
+                                                    <next>
+                                                      <block type="custom_repeat" id="~C;45-:GhTP`Gr|mOQd*">
+                                                        <field name="TIMES">5</field>
+                                                        <statement name="DO">
+                                                          <block type="maze_move" id="#Vh{WhJbmdI/gbR%KL2`"></block>
+                                                        </statement>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -1,0 +1,45 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="maze_start" id="Tvn.#GoOsG3_eHEKNpgk" deletable="false" x="20" y="20">
+    <statement name="NEXT">
+      <block type="maze_turn" id="X?kaLFzBg*sHeEkXloxH">
+        <field name="DIR">LEFT</field>
+        <next>
+          <block type="maze_move" id="QTu[fBao3c[dVUgg]eDh">
+            <next>
+              <block type="maze_move" id=".i^zoU^s1Sv;duQiFNzL">
+                <next>
+                  <block type="maze_move" id="*}%WL()`?IcW)-KngW1;">
+                    <next>
+                      <block type="maze_move" id="fOGlw29_9CnTfQL`uNRU">
+                        <next>
+                          <block type="maze_move" id="HF2CN+KLjGN7fmiUg|78">
+                            <next>
+                              <block type="maze_move" id="~0I~g=[Y#!fzmg6bR_7*">
+                                <next>
+                                  <block type="maze_move" id="TYL/a,m/]kgM6nPA39Ni">
+                                    <next>
+                                      <block type="maze_turn" id="^lpSXyu0a7:*@kIM%k~P">
+                                        <field name="DIR">RIGHT</field>
+                                        <next>
+                                          <block type="maze_move" id=".k#{)e0Z,AX~3D%yd7g5"></block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
