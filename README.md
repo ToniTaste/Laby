@@ -9,6 +9,7 @@ Führe einen Roboter mithilfe der blockbasierten Programmierung durch das Labyri
 - Einstellen der Ablaufgeschwindigkeit
 - Labyrinth austauschbar - Entwickle eigene Labyrinthe mit dem [Laby-Editor](https://github.com/ToniTaste/Laby-Editor)
 - Speichern/Laden des Programmcodes als XML
+- Konfiguration in den Dateien im Ordner data durch Lehrkraft anpassbar
 
 ## 🖼️ Screenshot
 
