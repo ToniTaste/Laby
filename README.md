@@ -22,7 +22,7 @@ Ein webbasiertes Zeichenprojekt mit Blockly – inspiriert von Turtle Graphics. 
 
 > Wird unterstützt durch **GitHub Pages**.
 
-👉 [Hier klicken, um das Projekt direkt im Browser zu starten](https://DEIN-BENUTZERNAME.github.io/stift-blockly/)
+👉 [Hier klicken, um das Projekt direkt im Browser zu starten](https://ToniTaste.github.io/Laby/)
 
 ## 📦 Installation (lokal)
 
