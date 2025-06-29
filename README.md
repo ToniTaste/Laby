@@ -1,4 +1,4 @@
-# ✏️ Blockly-Labyrinth
+# 🧱 Blockly-Labyrinth
 
 Führe einen Roboter mithilfe der blockbasierten Programmierung durch das Labyrinth. Nutzer:innen können über Blöcke einen Roboter steuern und zur Schatzkiste führen.
 
@@ -26,6 +26,6 @@ Führe einen Roboter mithilfe der blockbasierten Programmierung durch das Labyri
 Du kannst das Projekt lokal starten, indem du die Dateien einfach in einen Ordner speicherst und `index.html` in einem Browser öffnest:
 
 ```bash
-git clone https://github.com/DEIN-BENUTZERNAME/stift-blockly.git
-cd stift-blockly
+git clone https://github.com/ToniTaste/Laby.git
+cd Laby
 # Dann: index.html im Browser öffnen
