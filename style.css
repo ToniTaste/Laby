@@ -24,9 +24,9 @@ h1 {
 #blocklyDiv {
   flex: 1 1 auto;
   min-width: 280px;
-  max-width: 700px;   /* Obergrenze Breite */
+  max-width: 650px;   /* Obergrenze Breite */
   height: 80vh;
-  max-height: 700px;  /* Obergrenze Höhe */
+  max-height: 650px;  /* Obergrenze Höhe */
   border: 1px solid #ccc;
   background: #fff;
 }
@@ -52,8 +52,8 @@ h1 {
   flex: 0 0 auto;
   width: 100%;          /* nimmt den verfügbaren Platz */
   height: auto;
-  max-width: 600px;     /* Obergrenze Breite */
-  max-height: 600px;    /* Obergrenze Höhe */
+  max-width: 650px;     /* Obergrenze Breite */
+  max-height: 650px;    /* Obergrenze Höhe */
   border: 1px solid #ccc;
   background: #fff;
   display: block;
@@ -93,4 +93,5 @@ h1 {
 .slider-row input[type=range] {
   flex: 1;               /* Slider füllt den Platz */
 }
+
 
