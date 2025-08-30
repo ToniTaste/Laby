@@ -40,6 +40,13 @@ h1 {
   font-size: 0.9rem;
 }
 
+#controls hr {
+  border: none;               /* alle Standardrahmen weg */
+  border-top: 1px solid #999; /* dünne graue Linie */
+  margin: .5rem 0;            /* etwas Abstand nach oben/unten */
+  width: 100%;                /* volle Breite innerhalb controls */
+}
+
 /* Canvas-Bereich */
 #mazeCanvas {
   flex: 0 0 auto;
@@ -86,3 +93,4 @@ h1 {
 .slider-row input[type=range] {
   flex: 1;               /* Slider füllt den Platz */
 }
+
