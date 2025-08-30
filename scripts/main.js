@@ -29,6 +29,7 @@ window.highlightBlock = function (id) {
 };
 
 window.addEventListener('resize', () => {
+  Blockly.svgResize(workspace);
   drawMaze();
 });
 
