@@ -24,7 +24,16 @@ function drawMaze() {
   // Zellen ts tilesize - quadratisch und so groß wie möglich
   const ts = Math.min(Math.floor(width / cols), Math.floor(height / rows));
 
-  mazeCtx.clearRect(0, 0, width, height);
+  const usedW = cols * ts;
+  const usedH = rows * ts;
+
+  // Canvas anpassen
+  mazeCtx.canvas.width = usedW;
+  mazeCtx.canvas.height = usedH;
+  mazeCtx.canvas.style.width = usedW + "px";
+  mazeCtx.canvas.style.height = usedH + "px";
+
+  mazeCtx.clearRect(0, 0, usedW, usedH);
 
   // Labyrinth zellenweise bauen
   for (let y = 0; y < rows; y++) {
@@ -86,3 +95,4 @@ function mazeZiel() {
 function resetHighlight() {
   window.workspace?.highlightBlock(null);
 }
+
