@@ -1,71 +1,88 @@
-html, body {
-  height: 100%;
+body {
+  margin: 0;
   font-family: sans-serif;
-  margin: 10px;
+  background: #f9f9f9;
 }
 
+h1 {
+  font-size: 1.2rem;
+  margin: .5rem;
+}
+
+/* Hauptlayout: drei Spalten */
 #mainLayout {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 7rem); /* Platz für Überschrift oben */
+  gap: 1rem;
+  align-items: flex-start;
+  padding: .5rem;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
+/* Blockly-Bereich */
 #blocklyDiv {
-  flex: 0 1 500px;   /* flexibel, aber bevorzugt 700px */
-
+  flex: 1 1 auto;
+  min-width: 280px;
+  max-width: 700px;   /* Obergrenze Breite */
+  height: 80vh;
+  max-height: 700px;  /* Obergrenze Höhe */
+  border: 1px solid #ccc;
+  background: #fff;
 }
 
+/* Steuer-Buttons */
 #controls {
+  flex: 0 0 220px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin: 0 1rem;
+  gap: .5rem;
+  font-size: 0.9rem;
 }
 
-canvas#mazeCanvas {
-  flex: 0 0 500px;
-  width: 500px;
-  height: 100%;       /* nimmt volle Höhe des Containers */
+/* Canvas-Bereich */
+#mazeCanvas {
+  flex: 0 0 auto;
+  width: 100%;          /* nimmt den verfügbaren Platz */
+  height: auto;
+  max-width: 600px;     /* Obergrenze Breite */
+  max-height: 600px;    /* Obergrenze Höhe */
+  border: 1px solid #ccc;
+  background: #fff;
   display: block;
 }
 
 
-h1 {
-  margin-bottom: 1rem;
-}
-
-#controls label {
-  display: inline-flex;
-  align-items: center;
-  /* vertikal mittig ausrichten */
-  margin-bottom: 0.5rem;
-  /* dein bestehender Abstand */
-}
-
+/* Buttons */
 #controls button {
-  width: 100%;
-  /* Buttons füllen den Container */
-  margin: 0 0 0.5rem 0;
-  /* unten Abstand zwischen Buttons */
-  padding: 0.5rem;
-  /* etwas mehr Klickfläche */
+  padding: .3rem .5rem;
+  font-size: 0.9rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #eee;
+  cursor: pointer;
+}
+#controls button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
 }
 
-canvas {
-  border: 1px solid #ccc;
-}
-
-
+/* Schieberegler */
 #timeoutSlider {
-  width: 100px;
-  margin: 0 0.5rem;
+  width: 100%;
+}
+/* Schieberegler + Icons in einer Zeile */
+.slider-row {
+  display: flex;
+  align-items: center;   /* vertikal mittig */
+  gap: 0.3rem;           /* Abstand zwischen Icon und Slider */
 }
 
-
-.speed-icon {
-  font-size: 1.5rem;
+.slider-row .speed-icon {
+  font-size: 1.2rem;     /* Symbole etwas größer */
+  line-height: 1;        /* verhindert Versatz */
 }
 
-.blocklyMenuItem {
-  min-width: 1.5em;
+.slider-row input[type=range] {
+  flex: 1;               /* Slider füllt den Platz */
 }
