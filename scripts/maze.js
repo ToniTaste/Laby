@@ -13,50 +13,63 @@ function drawMaze() {
     mazeCtx = document.getElementById('mazeCanvas').getContext('2d');
   }
 
-  // Größe synchronisieren mit CSS
-  mazeCtx.canvas.height = mazeCtx.canvas.clientHeight;
-  mazeCtx.canvas.width = mazeCtx.canvas.clientWidth;
+  // Schritt 1: aktuelle Layout-Größe holen
+  const displayWidth  = mazeCtx.canvas.clientWidth;
+  const displayHeight = mazeCtx.canvas.clientHeight;
 
-  const { width, height } = mazeCtx.canvas;
+  // Schritt 2: Canvas-Pixelgröße anpassen
+  if (mazeCtx.canvas.width !== displayWidth || mazeCtx.canvas.height !== displayHeight) {
+    mazeCtx.canvas.width = displayWidth;
+    mazeCtx.canvas.height = displayHeight;
+  }
+
+  // Schritt 3: Tilesize berechnen
   rows = maze.grid.length;
   cols = maze.grid[0].length;
+  const ts = Math.min(Math.floor(displayWidth / cols), Math.floor(displayHeight / rows));
 
-  // Zellen ts tilesize - quadratisch und so groß wie möglich
-  const ts = Math.min(Math.floor(width / cols), Math.floor(height / rows));
-
+  // Schritt 4: tatsächliche genutzte Fläche ermitteln
   const usedW = cols * ts;
   const usedH = rows * ts;
 
-  // Canvas anpassen
-  mazeCtx.canvas.width = usedW;
-  mazeCtx.canvas.height = usedH;
-  mazeCtx.canvas.style.width = usedW + "px";
-  mazeCtx.canvas.style.height = usedH + "px";
+  // Fläche löschen
+  mazeCtx.clearRect(0, 0, displayWidth, displayHeight);
 
-  mazeCtx.clearRect(0, 0, usedW, usedH);
+  // Schritt 5: mittig einpassen (damit nicht gestreckt wird)
+  const offsetX = 0;
+  const offsetY = 0;
 
-  // Labyrinth zellenweise bauen
+  // Raster und Wände zeichnen
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < cols; x++) {
-      const px = x * ts, py = y * ts;
-      //grauer Rahmen
+      const px = offsetX + x * ts, py = offsetY + y * ts;
       mazeCtx.strokeStyle = '#ccc';
-      mazeCtx.strokeRect(x * ts, y * ts, ts, ts);
-      //Bilder in Zellen
+      mazeCtx.strokeRect(px, py, ts, ts);
       if (maze.grid[y][x] != 0) {
         mazeCtx.drawImage(imgBrickwall, px, py, ts, ts);
       }
     }
   }
-  //Ziel malen
-  mazeCtx.drawImage(imgTreasure, maze.goal.x * ts, maze.goal.y * ts, ts, ts);
+
+  // Ziel
+  mazeCtx.drawImage(imgTreasure,
+    offsetX + maze.goal.x * ts,
+    offsetY + maze.goal.y * ts,
+    ts, ts
+  );
+
+  // Spieler
   mazeCtx.save();
-  //Spieler malen
-  mazeCtx.translate(maze.player.x * ts + ts / 2, maze.player.y * ts + ts / 2);
+  mazeCtx.translate(
+    offsetX + maze.player.x * ts + ts / 2,
+    offsetY + maze.player.y * ts + ts / 2
+  );
   mazeCtx.rotate(maze.player.dir * Math.PI / 2 + Math.PI);
   mazeCtx.drawImage(imgRobot, -ts / 2, -ts / 2, ts, ts);
   mazeCtx.restore();
 }
+
+
 
 function mazeReset() {
   Object.assign(maze.player, startState);
@@ -95,4 +108,3 @@ function mazeZiel() {
 function resetHighlight() {
   window.workspace?.highlightBlock(null);
 }
-
