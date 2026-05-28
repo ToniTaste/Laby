@@ -1,16 +1,16 @@
 // generator.js
 
 Blockly.JavaScript.forBlock['maze_start'] = function (block, generator) {
-  return generator.statementToCode(block, 'NEXT');
+  return '';
 };
 
 Blockly.JavaScript.forBlock['maze_move'] = function (block, generator) {
-  return 'mazeMove();\n';
+  return `highlightBlock(${JSON.stringify(block.id)});\nmazeMove();\n`;
 };
 
 Blockly.JavaScript.forBlock['maze_turn'] = function (block, generator) {
   const dir = block.getFieldValue('DIR');
-  return `mazeTurn("${dir}");\n`;
+  return `highlightBlock(${JSON.stringify(block.id)});\nmazeTurn("${dir}");\n`;
 };
 Blockly.JavaScript.forBlock['custom_repeat'] = function (block, generator) {
   const repeats = block.getFieldValue('TIMES');

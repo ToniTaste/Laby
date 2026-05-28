@@ -36,8 +36,8 @@ function drawMaze() {
   mazeCtx.clearRect(0, 0, displayWidth, displayHeight);
 
   // Schritt 5: mittig einpassen (damit nicht gestreckt wird)
-  const offsetX = 0;
-  const offsetY = 0;
+  const offsetX = Math.floor((displayWidth - usedW) / 2);
+  const offsetY = Math.floor((displayHeight - usedH) / 2);
 
   // Raster und Wände zeichnen
   for (let y = 0; y < rows; y++) {
@@ -105,6 +105,6 @@ function mazeZiel() {
   return maze.player.x === maze.goal.x && maze.player.y === maze.goal.y;
 }
 
-function resetHighlight() {
-  window.workspace?.highlightBlock(null);
-}
+// function resetHighlight() {
+  // window.workspace?.highlightBlock(null);
+// }

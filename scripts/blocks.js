@@ -1,16 +1,9 @@
 Blockly.defineBlocksWithJsonArray([
   {
     "type": "maze_start",
-    "hidden": true,
     "message0": "Start",
-    "message1": "%1",
-    "args1": [
-      {
-        "type": "input_statement",
-        "name": "NEXT"
-      }
-    ],
-    "colour": "FFBF00",
+    "nextStatement": null,
+    "style": "start_blocks",
     "tooltip": "Startpunkt des Programms",
     "helpUrl": ""
   }
@@ -28,7 +21,10 @@ Blockly.defineBlocksWithJsonArray([
     "type": "maze_turn",
     "message0": "drehe %1",
     "args0": [
-      { "type": "field_dropdown", "name": "DIR", "options": [["links", "LEFT"], ["rechts", "RIGHT"]] }
+      { 
+	    "type": "field_dropdown", 
+		"name": "DIR", 
+		"options": [["links", "LEFT"], ["rechts", "RIGHT"]] }
     ],
     "previousStatement": null,
     "nextStatement": null,
