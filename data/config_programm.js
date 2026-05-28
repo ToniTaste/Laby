@@ -3,7 +3,7 @@ const defaultProgramXml = `
 
 <xml xmlns="https://developers.google.com/blockly/xml">
   <block type="maze_start" id="b0_1750435107018" deletable="false" x="20" y="20">
-    <statement name="NEXT">
+    <next>
       <block type="maze_turn" id="b1_1750435107018">
         <field name="DIR">LEFT</field>
         <next>
@@ -43,7 +43,7 @@ const defaultProgramXml = `
           </block>
         </next>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
 
