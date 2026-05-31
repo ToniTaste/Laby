@@ -82,6 +82,31 @@ h1 {
 }
 
 /* Canvas-Bereich */
+#mazePanel {
+  flex: 1 1 0;
+  min-width: 200px;
+  max-width: 650px;
+  max-height: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.block-limit-info {
+  flex: 0 0 auto;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f8f8f8;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.block-limit-info.full,
+.block-limit-info.exceeded {
+  font-weight: bold;
+}
+
 #mazeCanvas {
   flex: 1 1 0;
   min-width: 200px;
