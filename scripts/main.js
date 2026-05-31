@@ -46,6 +46,8 @@ window.addEventListener('load', () => {
     // hier Workspace mit Default-XML füllen
     const xmlDom = Blockly.utils.xml.textToDom(defaultProgramXml);
     Blockly.Xml.domToWorkspace(xmlDom, workspace);
+	
+	updateBlockLimitInfo();
 
     // Datei-Ladebereich für Projekt
     document.getElementById('xmlInput').addEventListener('change', e => {
@@ -91,6 +93,7 @@ window.addEventListener('load', () => {
 
             stepsInitialized = false;
             mazeReset();
+			updateBlockLimitInfo();
 
         };
         reader.readAsText(file);
@@ -145,6 +148,7 @@ function mazeFileRead(e) {
     };
     Object.assign(startState, data.player);
     mazeReset();
+	updateBlockLimitInfo();
 }
 
 const labyTheme = Blockly.Theme.defineTheme('labyTheme', {
@@ -176,7 +180,17 @@ function initBlockly() {
         renderer: 'zelos',
         theme: labyTheme
     });
-
+	
+    workspace.addChangeListener(function (event) {
+        if (
+            event.type === Blockly.Events.BLOCK_CREATE ||
+            event.type === Blockly.Events.BLOCK_DELETE ||
+            event.type === Blockly.Events.BLOCK_MOVE ||
+            event.type === Blockly.Events.BLOCK_CHANGE
+        ) {
+            updateBlockLimitInfo();
+        }
+    });
 }
 
 // Reset-Funktionen
@@ -206,6 +220,7 @@ function resetProgram() {
             ...startGoal
         };
     }
+	updateBlockLimitInfo();
 }
 
 // Entfernt alle Hervorhebungen
@@ -350,6 +365,45 @@ function countReachableBlocks(block) {
     }
 
     return count;
+}
+
+function getCurrentProgramBlockCount() {
+    if (!workspace) {
+        return 0;
+    }
+
+    const start = workspace
+        .getAllBlocks(false)
+        .find(block => block.type === 'maze_start');
+
+    if (!start) {
+        return 0;
+    }
+
+    return countReachableBlocks(start.getNextBlock());
+}
+
+function updateBlockLimitInfo() {
+    const info = document.getElementById('blockLimitInfo');
+
+    if (!info) {
+        return;
+    }
+
+    const usedBlocks = getCurrentProgramBlockCount();
+    const remainingBlocks = MAX_BLOCKS - usedBlocks;
+
+    info.classList.remove('full', 'exceeded');
+
+    if (remainingBlocks > 0) {
+        info.textContent = `Programmspeicher: noch ${remainingBlocks} von ${MAX_BLOCKS} Blöcken frei`;
+    } else if (remainingBlocks === 0) {
+        info.textContent = `Programmspeicher voll: ${usedBlocks} von ${MAX_BLOCKS} Blöcken verwendet`;
+        info.classList.add('full');
+    } else {
+        info.textContent = `Programmspeicher überschritten: ${usedBlocks} von ${MAX_BLOCKS} Blöcken verwendet`;
+        info.classList.add('exceeded');
+    }
 }
 
 function buildExecutionSteps(code) {
