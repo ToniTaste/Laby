@@ -23,9 +23,16 @@ Führe einen Roboter mithilfe der blockbasierten Programmierung durch das Labyri
 
 ## 📦 Installation (lokal)
 
-Du kannst das Projekt lokal starten, indem du die Dateien einfach in einen Ordner speicherst und `index.html` in einem Browser öffnest:
+Du kannst das Projekt lokal und ohne Internetzugang betreiben. Lade dazu alles über Code - Download ZIP herunter, entpacke das Archiv in einen Ordner und öffne `index.html` in einem Browser. Alternativ kannst du auch so vorgehen:
 
 ```bash
 git clone https://github.com/ToniTaste/Laby.git
 cd Laby
 # Dann: index.html im Browser öffnen
+```
+
+## Grafikquellen
+Vectors and icons by <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a>
+- robot.svg - COLLECTION: Universe 17, LICENSE: CC0 License, UPLOADER: SVG Repo
+- treasure.svg - COLLECTION: Lechazo Conf Flat Vectors, LICENSE: CC Attribution License, AUTHOR: lechazoconf
+- brickwall.svg - COLLECTION: Architecture Construction, LICENSE: CC0 License, UPLOADER: SVG Repo
